@@ -21,9 +21,7 @@ const reducer = (state = initialState, action) => {
         action.payload,
       ];
     case REMOVE_BOOK: {
-      const newArray = [...state];
-      newArray.splice((action.payload), 1);
-      return newArray;
+      return state.filter((book) => book.id !== action.payload);
     }
     default:
       return state;

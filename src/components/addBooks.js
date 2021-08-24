@@ -16,6 +16,8 @@ const AddBooks = () => {
 
   const add = () => {
     dispatch(addBook(newBook));
+    setTitle('');
+    setAuthor('');
   };
 
   const handleChange = (event) => {
