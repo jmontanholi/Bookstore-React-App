@@ -1,8 +1,18 @@
 import React from 'react';
+import AddBooks from './addBooks';
+import BookItem from './bookItem';
 
 const Books = () => (
   <div>
-    Not yet implemented
+    <div>
+      <h2>Books</h2>
+      <ul>
+        <BookItem />
+      </ul>
+    </div>
+    <div>
+      <AddBooks />
+    </div>
   </div>
 );
 
