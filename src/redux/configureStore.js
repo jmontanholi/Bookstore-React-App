@@ -14,9 +14,3 @@ const store = createStore(
 );
 
 export default store;
-// https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/YjNKpt0nstX4A8fNqIZ4/books
-// {
-//   "item_id": "item1",
-//   "title": "The Great Gatsby",
-//   "category": "Fiction"
-// }
