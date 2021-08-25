@@ -2,6 +2,7 @@ import { GET_BOOKS, GET_BOOKS_SUCCESS, GET_BOOKS_ERR } from '../slices/bookSlice
 
 const ADD_BOOK = 'bookStore/books/ADD_BOOK';
 const REMOVE_BOOK = 'bookStore/books/REMOVE_BOOK';
+const appUrl = 'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/YjNKpt0nstX4A8fNqIZ4/books';
 
 const initialState = {
   books: [],
@@ -22,25 +23,33 @@ const removeBook = (payload) => ({
 const reducer = (state = initialState, action) => {
   switch (action.type) {
     case ADD_BOOK:
-      return {
-        ...state,
-        books: [...state.books, action.payload],
-      };
+      fetch(appUrl, {
+        method: 'POST',
+        body: JSON.stringify({
+          item_id: action.payload.id,
+          title: action.payload.title,
+          category: action.payload.category,
+        }),
+        headers: {
+          'Content-type': 'application/json; charset=UTF-8',
+        },
+      });
+      return state;
     case REMOVE_BOOK: {
-      return {
-        ...state,
-        books: state.books.filter((book) => book.id !== action.payload),
-      };
+      fetch(`https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/YjNKpt0nstX4A8fNqIZ4/books/${action.payload}`, {
+        method: 'DELETE',
+        headers: {
+          'Content-type': 'application/json; charset=UTF-8',
+        },
+      });
+      return state;
     }
     case GET_BOOKS:
-      console.log(action.payload);
       return { ...state, loading: true };
     case GET_BOOKS_SUCCESS:
-      console.log(action.payload);
-      return { ...state, loading: false, books: action.payload };
+      return { ...state, loading: false, books: action.data };
     case GET_BOOKS_ERR:
-      console.log(action.payload);
-      return { ...state, loading: false, error: action.payload };
+      return { ...state, loading: false, error: action.error };
     default:
       return state;
   }

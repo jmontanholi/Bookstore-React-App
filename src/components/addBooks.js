@@ -6,25 +6,25 @@ import { addBook } from '../redux/books/books';
 
 const AddBooks = () => {
   const [title, setTitle] = useState('');
-  const [author, setAuthor] = useState('');
+  const [category, setCategory] = useState('');
   const newBook = {
     id: generateId(),
     title,
-    author,
+    category,
   };
   const dispatch = useDispatch();
 
   const add = () => {
     dispatch(addBook(newBook));
     setTitle('');
-    setAuthor('');
+    setCategory('');
   };
 
   const handleChange = (event) => {
     if (event.target.id === 'title') {
       setTitle(event.target.value);
-    } else if (event.target.id === 'author') {
-      setAuthor(event.target.value);
+    } else if (event.target.id === 'category') {
+      setCategory(event.target.value);
     }
   };
 
@@ -35,9 +35,9 @@ const AddBooks = () => {
           Title:
           <input type="text" id="title" value={title} onChange={(e) => { handleChange(e); }} />
         </label>
-        <label htmlFor="author">
-          Author:
-          <input type="text" id="author" value={author} onChange={(e) => { handleChange(e); }} />
+        <label htmlFor="category">
+          Category:
+          <input type="text" id="category" value={category} onChange={(e) => { handleChange(e); }} />
         </label>
       </form>
       <button type="button" onClick={() => { add(); }}>Add Book</button>
