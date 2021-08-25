@@ -4,7 +4,7 @@ import { removeBook } from '../redux/books/books';
 
 const BookItem = () => {
   const state = useSelector((state) => state);
-  const { books } = state;
+  const { books } = state.books;
   const dispatch = useDispatch();
   const remove = (e) => {
     dispatch(removeBook(e.target.id));
