@@ -10,7 +10,9 @@ import store from './redux/configureStore';
 import Books from './components/books';
 import Categories from './components/categories';
 import NavBar from './components/navBar';
+import getBooks from './redux/slices/bookSlice';
 
+getBooks();
 ReactDOM.render(
   <Provider store={store}>
     <Router>
