@@ -13,8 +13,10 @@ const BookItem = () => {
   useEffect(() => {
     dispatch(getBooks());
   }, []);
-  const remove = (e) => {
+  const remove = async (e) => {
     dispatch(removeBook(e.target.id));
+    await dispatch(getBooks());
+    document.location.reload(true);
   };
   const properties = Object.getOwnPropertyNames(booksObject);
   const displayBooks = [];

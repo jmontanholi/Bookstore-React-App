@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import { v4 as generateId } from 'uuid';
 import { useDispatch } from 'react-redux';
 import { addBook } from '../redux/books/books';
+import getBooks from '../redux/slices/bookSlice';
 
 const AddBooks = () => {
   const [title, setTitle] = useState('');
@@ -14,10 +15,12 @@ const AddBooks = () => {
   };
   const dispatch = useDispatch();
 
-  const add = () => {
+  const add = async () => {
     dispatch(addBook(newBook));
     setTitle('');
     setCategory('');
+    await dispatch(getBooks());
+    document.location.reload(true);
   };
 
   const handleChange = (event) => {
