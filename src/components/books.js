@@ -1,17 +1,17 @@
 import React from 'react';
 import AddBooks from './addBooks';
 import BookItem from './bookItem';
+import style from './books.module.css';
 
 const Books = () => (
-  <div>
-    <div>
-      <h2>Books</h2>
-      <ul>
-        <BookItem />
-      </ul>
+  <div className={style.div}>
+    <div className={style.bookDiv}>
+      <AddBooks />
     </div>
     <div>
-      <AddBooks />
+      <ul className={style.ul}>
+        <BookItem />
+      </ul>
     </div>
   </div>
 );

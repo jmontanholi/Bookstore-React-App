@@ -1,0 +1,13 @@
+.div {
+  width: 80%;
+  margin: auto;
+}
+
+.bookDiv {
+  border-bottom: 1px solid#e8e8e8;
+  margin-bottom: 2rem;
+}
+
+.ul {
+  padding: 0;
+}

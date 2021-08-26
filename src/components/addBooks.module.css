@@ -1,0 +1,71 @@
+.font1Bold {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+}
+
+.font1Reg {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+}
+
+.title {
+  color: #888;
+}
+
+.div {
+  width: 100%;
+}
+
+.form {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2em;
+}
+
+.input {
+  height: 2.813rem;
+  border-radius: 5px;
+  border: 1px solid #e8e8e8;
+  padding-left: 15px;
+  transition: all 0.5s;
+}
+
+.input:focus {
+  box-shadow: 1px 1px 5px black;
+  border: 1px solid #e8e8e8;
+  outline: none;
+}
+
+.input::placeholder {
+  font-size: 1rem;
+  color: #c4c4c4;
+}
+
+.input1 {
+  width: 41.5rem;
+}
+
+.input2 {
+  width: 17.813rem;
+}
+
+.button {
+  width: 11.5rem;
+  height: 2.813rem;
+  border-radius: 3px;
+  background-color: #0290ff;
+  border: none;
+  color: white;
+  transition: all 0.5s;
+}
+
+.button:hover {
+  cursor: pointer;
+  background-color: #037bd6;
+}
+
+.button:active {
+  box-shadow: inset 1px 1px 5px black;
+  background-color: #0362aa;
+}

@@ -11,6 +11,7 @@ import Books from './components/books';
 import Categories from './components/categories';
 import NavBar from './components/navBar';
 import getBooks from './redux/slices/bookSlice';
+import './App.css';
 
 getBooks();
 ReactDOM.render(
