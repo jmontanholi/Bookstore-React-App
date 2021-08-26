@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Slab:wght@300;700&display=swap');
+
+.font1Reg {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+}
+
+.font1Bold {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+}
+
+.font2Light {
+  font-family: 'Roboto Slab', serif;
+  font-weight: 300;
+}
+
+.font2Bold {
+  font-family: 'Roboto Slab', serif;
+  font-weight: 700;
+}
+
+.nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid #e8e8e8;
+  background-color: #fff;
+  margin: 0;
+  padding: 0;
+  height: 80px;
+}
+
+.div {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 90%;
+}
+
+.insideDiv1 {
+  display: flex;
+  align-items: center;
+  flex: 2;
+}
+
+.insideDiv2 {
+  flex: 0.1;
+}
+
+.linksDiv {
+  display: flex;
+  justify-content: space-between;
+}
+
+.link {
+  color: #121212;
+  font-size: 0.8rem;
+  margin-left: 4em;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  text-decoration: none;
+  letter-spacing: 1.9px;
+}
+
+.title {
+  font-size: 2.5rem;
+  color: #0290ff;
+  margin: 0;
+}
+
+.icon {
+  color: #0290ff;
+  font-size: 1.2rem;
+  border: 1px solid #e8e8e8;
+  border-radius: 50%;
+  padding: 5px;
+}
