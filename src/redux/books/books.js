@@ -27,8 +27,8 @@ const reducer = (state = initialState, action) => {
         method: 'POST',
         body: JSON.stringify({
           item_id: action.payload.id,
-          title: action.payload.title,
-          category: action.payload.category,
+          title: action.payload.title.trim(),
+          category: action.payload.category.trim(),
         }),
         headers: {
           'Content-type': 'application/json; charset=UTF-8',
