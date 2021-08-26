@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 // eslint-disable-next-line import/no-extraneous-dependencies
 import { removeBook } from '../redux/books/books';
 import getBooks from '../redux/slices/bookSlice';
+import style from './bookItem.module.css';
 
 const BookItem = () => {
   const state = useSelector((state) => state);
@@ -24,18 +25,14 @@ const BookItem = () => {
     if (booksObject[x][0] !== undefined) {
       booksObject[x].map((book) => (
         displayBooks.push(
-          <li id={x} key={x}>
-            <p>
-              Title:
-              { ' ' }
-              { book.title }
-            </p>
-            <p>
-              Category:
-              { ' ' }
+          <li id={x} key={x} className={style.li}>
+            <p className={`${style.category} ${style.font1Bold}`}>
               { book.category }
             </p>
-            <button type="button" id={x} onClick={(e) => { remove(e); }}>Remove Book</button>
+            <p className={`${style.title} ${style.font2Bold}`}>
+              { book.title }
+            </p>
+            <button className={style.button} type="button" id={x} onClick={(e) => { remove(e); }}>Remove Book</button>
           </li>,
         )
       ));
