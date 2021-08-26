@@ -3,6 +3,11 @@
   font-weight: 700;
 }
 
+.font1Reg {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+}
+
 .font2Light {
   font-family: 'Roboto Slab', serif;
   font-weight: 300;
@@ -24,13 +29,18 @@
   border: 1px solid #e8e8e8;
   border-radius: 5px;
   margin-bottom: 15px;
+  padding-bottom: 20px;
+}
+
+.bookDiv {
+  flex: 3;
 }
 
 .title {
   flex: 8;
-  font-size: 2rem;
-  text-align: center;
-}
+  font-size: 1.375rem;
+  margin-left: 2rem;
+} 
 
 .category {
   flex: 1;
@@ -39,11 +49,23 @@
   opacity: 0.5;
 }
 
-.button {
+.remove {
+  margin-left: 2rem;
+  color: #4386bf;
+  background-color: transparent;
+  border: none;
+  transition: all 0.5s;
+}
+
+.remove:hover {
+  cursor: pointer;
+  color: black;
+}
+
+.update {
   background-color: #0290ff;
   color: #fff;
   border-radius: 3px;
-  margin: 0.75rem 0 0.563rem 3.688rem;
   width: 11.5rem;
   height: 2.063rem;
   flex: 1;
@@ -52,12 +74,49 @@
   transition: all 0.5s;
 }
 
-.button:hover {
+.update:hover {
   cursor: pointer;
   background-color: #037bd6;
 }
 
-.button:active {
+.update:active {
   box-shadow: inset 1px 1px 5px black;
   background-color: #0362aa;
+}
+
+.graphic {
+  width: 4.25rem;
+  height: 4.25rem;
+  border: 5px solid #d3d3d3;
+  border-radius: 50%;
+}
+
+.graphicDiv {
+  display: flex;
+  flex: 0.7;
+  border-right: 2px solid #e8e8e8;
+}
+
+.percentage {
+  font-size: 2rem;
+  margin: 0 0 0 2rem;
+}
+
+.completed {
+  font-size: 0.875rem;
+  margin: 0 0 0 2rem;
+}
+
+.updateDiv {
+  flex: 1;
+  text-align: left;
+  margin-left: 2em;
+}
+
+.current {
+  opacity: 0.5;
+}
+
+.chapter {
+  letter-spacing: -0.4px;
 }

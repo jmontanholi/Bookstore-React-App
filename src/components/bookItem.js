@@ -26,13 +26,27 @@ const BookItem = () => {
       booksObject[x].map((book) => (
         displayBooks.push(
           <li id={x} key={x} className={style.li}>
-            <p className={`${style.category} ${style.font1Bold}`}>
-              { book.category }
-            </p>
-            <p className={`${style.title} ${style.font2Bold}`}>
-              { book.title }
-            </p>
-            <button className={style.button} type="button" id={x} onClick={(e) => { remove(e); }}>Remove Book</button>
+            <div className={style.bookDiv}>
+              <p className={`${style.category} ${style.font1Bold}`}>
+                { book.category }
+              </p>
+              <p className={`${style.title} ${style.font2Bold}`}>
+                { book.title }
+              </p>
+              <button className={style.remove} type="button" id={x} onClick={(e) => { remove(e); }}>Remove Book</button>
+            </div>
+            <div className={style.graphicDiv}>
+              <div className={style.graphic} />
+              <div>
+                <p className={`${style.percentage} ${style.font1Reg}`}>0%</p>
+                <p className={`${style.completed} ${style.font1Reg}`}>Completed</p>
+              </div>
+            </div>
+            <div className={style.updateDiv}>
+              <h3 className={`${style.current} ${style.font2Light}`}>Current Chapter</h3>
+              <p className={`${style.chapter} ${style.font2Light}`}>Introduction</p>
+              <button type="button" className={style.update}>UPDATE PROGRESS</button>
+            </div>
           </li>,
         )
       ));
